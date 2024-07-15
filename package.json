@@ -97,6 +97,23 @@
 			"type": "object",
 			"title": "Memo",
 			"properties": {
+				"memo.backlinksPanel.sortOrder": {
+					"enum": [
+						"path",
+						"alphabet",
+						"last-modified",
+						"last-modified-refs"
+					],
+					"enumDescriptions": [
+						"Backlinks are sorted by their paths.",
+						"Backlinks are sorted by their directionary order.",
+						"Backlinks are sorted by their last modified time.",
+						"Backlinks are sorted by their last modified reference's time."
+					],
+					"default": "path",
+					"scope": "resource",
+					"description": "Controls the sorting order of backlinks."
+				},
 				"memo.backlinksPanel.collapseParentItems": {
 					"default": false,
 					"scope": "resource",
