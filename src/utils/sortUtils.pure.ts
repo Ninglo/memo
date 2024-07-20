@@ -29,7 +29,7 @@ const getMTimeOfLastModifiedRef =
 const withModifiedTime =
   (getMTimeOfFile: GetMTimeOfFile, file: (path: string) => vscode.Uri) =>
   (type: SortPathsByModifiedType) =>
-  async ([path, ref]: [string, PickedFoundRefT[]]): Promise<[number, string]> => {
+  async ([path, ref]: [string, PickedFoundRefT[]]): Promise<Readonly<[number, string]>> => {
     const lastModified =
       type === 'last-modified'
         ? await getMTimeOfFile(file(path))
